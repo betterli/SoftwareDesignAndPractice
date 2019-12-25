@@ -45,6 +45,10 @@ namespace WpfApp1
 		{
 			
 		}
+		private void OnClose_Click(object sender, RoutedEventArgs e)
+		{
+			this.Close();
+		}
 		private void CheckEmail()
 		{
 			string reg = @"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*";

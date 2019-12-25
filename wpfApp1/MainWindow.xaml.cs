@@ -41,13 +41,14 @@ namespace WpfApp1
             //    = new BitmapImage(new Uri(FileName2));
         }
 
-    public class DelegateCommand
-    {
-        private Action p;
-
-        public DelegateCommand(Action p)
+        public class DelegateCommand
         {
-            this.p = p;
+            private Action p;
+
+            public DelegateCommand(Action p)
+            {
+                this.p = p;
+            }
         }
     }
 }

@@ -13,3 +13,4 @@ C:\Users\cc\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResour
 C:\Users\cc\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\cc\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
 C:\Users\cc\source\repos\WpfApp1\WpfApp1\obj\Debug\Window1.g.cs
+C:\Users\cc\source\repos\WpfApp1\WpfApp1\obj\Debug\Window1.baml
