@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="打开文本文件" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Stretch">
+            <TextBlock>文件名：</TextBlock>
+            <TextBox Name="file_name" Width="200"></TextBox>
+            <Button Width="30" Click="OnOpen_Click"  Content="..." />
+            <TextBlock>编码：</TextBlock>
+            <ComboBox Name="encodingBox" Width="150" SelectedIndex="0"
+              IsEditable="False">
+                <ComboBoxItem Name="utf8" Content="Unicode(UTF-8)"/>
+                <ComboBoxItem Name="ascii" Content="Ascii"/>
+                <ListBox Height="100" Width="100"/>
+            </ComboBox>
+        </StackPanel>
+        <TextBox Name="email" TextWrapping="Wrap" Height="300" DockPanel.Dock="Top"/>
+        <StackPanel DockPanel.Dock="Bottom">
+            <Button Content="确定" Click="OnSubmit_Click" HorizontalAlignment="Right"/>
+            <Button Content="取消" Click="OnClose_Click" HorizontalAlignment="Right"/>
+        </StackPanel>
+    </DockPanel>
 </Window>

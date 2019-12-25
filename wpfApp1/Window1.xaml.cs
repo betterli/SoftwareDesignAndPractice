@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,6 +25,33 @@ namespace WpfApp1
 		public Window1()
 		{
 			InitializeComponent();
+
 		}
+
+		public object Util { get; private set; }
+
+		private void OnOpen_Click(object sender, RoutedEventArgs e)
+		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.ShowDialog();
+			string path = openFileDialog.FileName;
+			file_name.Text = path;
+			if(encodingBox.SelectedItem == utf8)
+				email.Text = File.ReadAllText(path, Encoding.UTF8);
+			else if (encodingBox.SelectedItem == ascii)
+				email.Text = File.ReadAllText(path, Encoding.ASCII);
+		}
+		private void OnSubmit_Click(object sender, RoutedEventArgs e)
+		{
+			
+		}
+		private void CheckEmail()
+		{
+			string reg = @"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*";
+			Regex r = new Regex(reg);
+			
+		}
+
+
 	}
 }

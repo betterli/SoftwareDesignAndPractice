@@ -8,21 +8,20 @@
         Title="MainWindow" Height="1080" Width="720">
     <DockPanel>
         <TextBlock  DockPanel.Dock="Top">请在下方输入有效Email地址</TextBlock>
+        <TextBox x:Name="valid_email" />
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Stretch">
             <TextBlock  Width="650">请在下方输入Email正文</TextBlock>
-            <ToolBar>
-                <Button Click="OnOpen_Click" />
-            </ToolBar>
+            <Button Width="20" Click="OnOpen_Click" />
         </StackPanel>
         <TextBox Name="email" TextWrapping="Wrap" DockPanel.Dock="Top"/>
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Stretch">
             <TextBlock  Width="650" >请在下方输入或是选择附件图片：</TextBlock>
             <ToolBar >
-                <Button Click="OnOpen_Click" />
+                <Button Width="20" Click="OnOpenImage_Click" />
             </ToolBar>
         </StackPanel>
         <StackPanel >
-            <Image Source="{Binding PictureFileName}" Height="100" />
+            <Image Source="{Binding Image}" Height="100" />
         </StackPanel>
         <Button Content = "确定" Click="OnSubmit_Click" DockPanel.Dock="Bottom" Visibility="{Binding}"/>
         <TextBox Text="{Binding Data}" />
